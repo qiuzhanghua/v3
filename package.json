@@ -1,6 +1,11 @@
 {
   "name": "v3",
   "version": "0.1.0",
+  "author": {
+    "name": "邱张华",
+    "email": "qiuzhanghua@icloud.com"
+  },
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
