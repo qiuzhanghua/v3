@@ -3,11 +3,13 @@
     <h1>{{ msg }}</h1>
     <h2>{{ count }}</h2>
   </div>
-  <span v-bind:title="message">
-    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+  <span v-once>
+    {{ message }}
   </span>
+  <br />
   <input v-model="message" />
-  <button v-on:click="reverseMessage">反转 Message</button>
+  <br />
+  <button @click="reverseMessage">反转 Message</button>
 </template>
 
 <script>
@@ -26,11 +28,21 @@ export default {
     setInterval(() => {
       this.count++;
     }, 1000);
+    console.log("mounted!");
   },
   methods: {
     reverseMessage() {
       this.message = this.message.split("").reverse().join("");
     },
+  },
+  created() {
+    console.log("created!");
+  },
+  unmounted() {
+    console.log("unmounted!");
+  },
+  beforeUpdate() {
+    console.log("beforeUpdate!");
   },
 };
 </script>

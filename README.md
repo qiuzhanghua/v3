@@ -24,3 +24,9 @@ yarn build
 ```bash
 yarn lint
 ```
+
+### Jest unit test
+
+```bash
+yarn test:unit
+```
