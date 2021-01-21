@@ -7,7 +7,8 @@
     {{ message }}
   </span>
   <br />
-  <input v-model="message" />
+  <label for="message">请输入:</label>
+  <input id="message" v-model="message" />
   <br />
   <button @click="reverseMessage">反转 Message</button>
 </template>
